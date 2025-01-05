@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --dark-color: #167D7F;
+  --light-color: #98D7C2;
+  --fonts-color: #167D7F;
+  --hover-color: #29A0B1;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.nav-link {
+  @apply text-[var(--fonts-color)] hover:text-[var(--hover-color)] transition-colors duration-300;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--hover-color);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[var(--dark-color)] to-[var(--hover-color)];
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-2xl hover:-translate-y-2;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.service-card {
+  @apply bg-white p-8 rounded-xl shadow-lg transition-all duration-500 h-full flex flex-col;
+  background: linear-gradient(145deg, #ffffff, #f3f4f6);
+}
+
+.service-card:hover {
+  @apply transform -translate-y-2;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.stats-grid {
+  @apply grid grid-cols-2 md:grid-cols-4 gap-8 my-16;
+  background: linear-gradient(135deg, rgba(22, 125, 127, 0.1), rgba(152, 215, 194, 0.1));
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.stat-card {
+  @apply text-center p-4 rounded-lg;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+}
+
+.tech-icon {
+  @apply w-16 h-16 mx-auto mb-4 text-[var(--dark-color)];
+}
+
+.feature-card {
+  @apply bg-white p-6 rounded-xl shadow-lg transition-all duration-300 h-full;
+  background: linear-gradient(145deg, #ffffff, #f3f4f6);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.tech-stack-grid {
+  @apply grid grid-cols-2 md:grid-cols-4 gap-6 my-12;
+}
+
+.tech-item {
+  @apply flex flex-col items-center p-4 bg-white rounded-lg shadow-md transition-all duration-300;
+}
+
+.tech-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
