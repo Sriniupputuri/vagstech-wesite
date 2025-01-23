@@ -19,7 +19,7 @@
 }
 
 .nav-link {
-  @apply text-[var(--fonts-color)] hover:text-[var(--hover-color)] transition-colors duration-300;
+  @apply text-[white] hover:text-[var(--hover-color)] transition-colors duration-300;
   position: relative;
 }
 

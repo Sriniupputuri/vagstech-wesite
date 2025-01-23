@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-2xl font-bold mb-4">TechCorp</h3>
+            <h3 className="text-2xl font-bold mb-4">Vagstech</h3>
             <p className="text-[var(--light-color)]">
               Transforming ideas into digital reality with innovative solutions.
             </p>
@@ -16,15 +16,15 @@ export default function Footer() {
             <div className="space-y-2">
               <p className="flex items-center">
                 <Mail className="mr-2 h-5 w-5" />
-                info@techcorp.com
+                admin@vagstech.com
               </p>
               <p className="flex items-center">
                 <Phone className="mr-2 h-5 w-5" />
-                +1 (555) 123-4567
+                +91 72072 76792
               </p>
               <p className="flex items-center">
                 <MapPin className="mr-2 h-5 w-5" />
-                123 Tech Street, Silicon Valley, CA
+                  8-2-611/10, Road No 10 Banjara<br /> Hills  Hyderabad, Telangana, India - 500034.
               </p>
             </div>
           </div>
@@ -37,8 +37,18 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/services" className="hover:text-[var(--light-color)] transition-colors">
-                  Services
+                <a href="/services/web-development" className="hover:text-[var(--light-color)] transition-colors">
+                  Web Development
+                </a>
+              </li>
+              <li>
+                <a href="/services/game-development" className="hover:text-[var(--light-color)] transition-colors">
+                Game Development
+                </a>
+              </li>
+              <li>
+                <a href="/services/ecommerce" className="hover:text-[var(--light-color)] transition-colors">
+                E-commerce
                 </a>
               </li>
               <li>
@@ -50,7 +60,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-600 text-center">
-          <p>&copy; {new Date().getFullYear()} TechCorp. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Vagstech. All rights reserved.</p>
         </div>
       </div>
     </footer>

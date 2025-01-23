@@ -8,9 +8,9 @@ import { ArrowRight } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-b from-white to-[var(--light-color)]/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <section className="relative min-h-fit flex items-center overflow-hidden bg-gradient-to-b from-white to-[var(--light-color)]/10 lg:my-8">
+      <div className="max-w-7xl mx-auto px-4 py-4 sm:px-4 lg:px-4">
+        <div className="grid lg:grid-cols-2 gap-4 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -22,7 +22,7 @@ export default function HeroSection() {
               <span className="gradient-text">Excel.</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              VAGSTECH IT SOLUTIONS - Your partner in digital transformation. We deliver cutting-edge technology solutions that drive growth and innovation.
+              <span className="gradient-text">VAGSTECH IT SERVICES</span> - Your partner in digital transformation. We deliver cutting-edge technology solutions that drive growth and innovation.
             </p>
             <div className="flex gap-4">
               <Link href="/contact">
@@ -40,7 +40,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            <div className="animate-float">
+            <div className="animate-float my-4 md:my-0">
               <Image
                 src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3"
                 alt="Digital Innovation"

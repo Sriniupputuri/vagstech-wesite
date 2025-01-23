@@ -6,17 +6,17 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <div className="py-20">
+    <div className="pt-8 Pb-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
-        <FadeIn>
+        {/* <FadeIn>
           <h1 className="text-4xl md:text-5xl font-bold text-center mb-8">
-            <span className="gradient-text">About TechCorp</span>
+            <span className="gradient-text">About Vagstech</span>
           </h1>
           <p className="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
             Pioneering digital innovation with expertise and creativity
           </p>
-        </FadeIn>
+        </FadeIn> */}
 
         {/* Mission Section */}
         <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
@@ -34,7 +34,7 @@ export default function About() {
           <FadeIn direction="left">
             <h2 className="text-3xl font-bold mb-6 text-[var(--dark-color)]">Our Mission</h2>
             <p className="text-gray-600 mb-6">
-              At TechCorp, we're driven by a singular mission: to transform businesses through innovative digital solutions. We combine cutting-edge technology with creative excellence to deliver exceptional results that drive growth and success.
+              At Vagstech, we're driven by a singular mission: to transform businesses through innovative digital solutions. We combine cutting-edge technology with creative excellence to deliver exceptional results that drive growth and success.
             </p>
             <p className="text-gray-600">
               Our team of experts works tirelessly to stay ahead of industry trends, ensuring our clients receive the most advanced and effective solutions for their digital needs.
@@ -74,15 +74,15 @@ export default function About() {
         </div>
 
         {/* Team Section */}
-        <FadeIn>
+        {/* <FadeIn>
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-6 text-[var(--dark-color)]">Our Leadership Team</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Meet the experts who drive our innovation and success
             </p>
           </div>
-        </FadeIn>
-        <div className="grid md:grid-cols-3 gap-8">
+        </FadeIn> */}
+        {/* <div className="grid md:grid-cols-3 gap-8">
           {[
             {
               name: "Sarah Johnson",
@@ -117,7 +117,7 @@ export default function About() {
               </motion.div>
             </FadeIn>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );

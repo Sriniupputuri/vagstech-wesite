@@ -3,35 +3,70 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Menu, X, ChevronDown } from "lucide-react";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+// import {
+//   DropdownMenu,
+//   DropdownMenuContent,
+//   DropdownMenuItem,
+//   DropdownMenuTrigger,
+// } from "@/components/ui/dropdown-menu";
+import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const ServicesDropdown = () => {
+    return (
+      <DropdownMenu.Root>
+        <DropdownMenu.Trigger asChild>
+          <button className="nav-link flex items-center text-white">
+            Services <ChevronDown className="ml-1 h-4 w-4" />
+          </button>
+        </DropdownMenu.Trigger>
+        <DropdownMenu.Portal>
+          <DropdownMenu.Content
+            className="rounded-md bg-white shadow-lg z-50 border-none"
+            sideOffset={5}
+          >
+            <DropdownMenu.Item className="group relative flex h-[30px] border-[var(--dark-color)] items-center rounded-md px-4 text-[14px] hover:bg-[var(--dark-color)] hover:text-white cursor-pointer">
+              <Link href="/services/web-development" className="w-full" onClick={() => setIsOpen(!isOpen)}>
+                Web Development
+              </Link>
+            </DropdownMenu.Item>
+            <DropdownMenu.Item className="group relative flex h-[30px] border-none items-center rounded-md pl-4 pr-4 text-[14px] hover:bg-[var(--dark-color)] hover:text-white cursor-pointer">
+              <Link href="/services/game-development" className="w-full" onClick={() => setIsOpen(!isOpen)}>
+                Game Development
+              </Link>
+            </DropdownMenu.Item>
+            <DropdownMenu.Item className="group relative flex h-[30px] border-none items-center rounded-md pl-4 pr-4 text-[14px] hover:bg-[var(--dark-color)] hover:text-white cursor-pointer">
+              <Link href="/services/ecommerce" className="w-full" onClick={() => setIsOpen(!isOpen)}>
+                E-commerce
+              </Link>
+            </DropdownMenu.Item>
+          </DropdownMenu.Content>
+        </DropdownMenu.Portal>
+      </DropdownMenu.Root>
+    );
+  };
+
   return (
-    <nav className="bg-white shadow-lg fixed w-full z-50">
+    <nav className="bg-[var(--dark-color)] shadow-lg fixed w-full z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link href="/" className="text-2xl font-bold text-[var(--dark-color)]">
-              TechCorp
+            <Link href="/" className="text-2xl font-bold text-white">
+              VAGSTECH
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center text-white space-x-8">
             <Link href="/" className="nav-link">
               Home
             </Link>
             <Link href="/about" className="nav-link">
               About
             </Link>
-            <DropdownMenu>
+            {/* <DropdownMenu>
               <DropdownMenuTrigger className="nav-link flex items-center">
                 Services <ChevronDown className="ml-1 h-4 w-4" />
               </DropdownMenuTrigger>
@@ -52,7 +87,8 @@ export default function Navbar() {
                   </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
-            </DropdownMenu>
+            </DropdownMenu> */}
+            <ServicesDropdown />
             <Link href="/contact" className="nav-link">
               Contact Us
             </Link>
@@ -62,7 +98,7 @@ export default function Navbar() {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-[var(--dark-color)]"
+              className="text-white"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>

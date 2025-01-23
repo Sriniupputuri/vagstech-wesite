@@ -28,32 +28,32 @@ const services = [
     features: ["Secure Payments", "Inventory Management", "Mobile Commerce"],
     link: "/services/ecommerce",
   },
-  {
-    icon: Database,
-    title: "Database Solutions",
-    description: "Robust database architecture and optimization services to ensure your data is secure, efficient, and scalable.",
-    features: ["Data Migration", "Performance Tuning", "Backup Solutions"],
-    link: "/services/database",
-  },
-  {
-    icon: Cloud,
-    title: "Cloud Services",
-    description: "Comprehensive cloud solutions using AWS, Azure, and Google Cloud. Optimize your infrastructure for performance and cost.",
-    features: ["Cloud Migration", "DevOps", "Scalability"],
-    link: "/services/cloud",
-  },
-  {
-    icon: Shield,
-    title: "Cybersecurity",
-    description: "Protect your digital assets with our comprehensive security solutions and best practices implementation.",
-    features: ["Security Audits", "Penetration Testing", "Compliance"],
-    link: "/services/security",
-  },
+  // {
+  //   icon: Database,
+  //   title: "Database Solutions",
+  //   description: "Robust database architecture and optimization services to ensure your data is secure, efficient, and scalable.",
+  //   features: ["Data Migration", "Performance Tuning", "Backup Solutions"],
+  //   link: "/services/database",
+  // },
+  // {
+  //   icon: Cloud,
+  //   title: "Cloud Services",
+  //   description: "Comprehensive cloud solutions using AWS, Azure, and Google Cloud. Optimize your infrastructure for performance and cost.",
+  //   features: ["Cloud Migration", "DevOps", "Scalability"],
+  //   link: "/services/cloud",
+  // },
+  // {
+  //   icon: Shield,
+  //   title: "Cybersecurity",
+  //   description: "Protect your digital assets with our comprehensive security solutions and best practices implementation.",
+  //   features: ["Security Audits", "Penetration Testing", "Compliance"],
+  //   link: "/services/security",
+  // },
 ];
 
 export default function ServicesSection() {
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-[var(--light-color)]/10">
+    <section className="py-8 bg-gradient-to-b from-white to-[var(--light-color)]/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeIn>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
