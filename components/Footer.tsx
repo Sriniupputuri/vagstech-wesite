@@ -36,11 +36,11 @@ export default function Footer() {
                   About Us
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a href="/courses" className="hover:text-[var(--light-color)] transition-colors">
                 Courses
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a href="/services/web-development" className="hover:text-[var(--light-color)] transition-colors">
                   Web Development
