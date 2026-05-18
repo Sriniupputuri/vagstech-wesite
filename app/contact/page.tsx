@@ -15,8 +15,8 @@ export default function Contact() {
     e.preventDefault();
 
     // Replace these with your EmailJS configuration
-    const serviceID = "service_x9o78kh";
-    const templateID = "template_jh1hrmb";
+    const serviceID = "service_jc3eid8";
+    const templateID = "template_d9e1zfb";
     const userID = "your_user_id";
 
     const templateParams = {
@@ -26,7 +26,7 @@ export default function Contact() {
 
     try {
       const response = await emailjs.send(serviceID, templateID, templateParams,{
-        publicKey: 'Su4wh4ywVn5zAWw1G',
+        publicKey: 'fEQl5GrVjLKmB1eMF',
       });
       toast.success("Message sent successfully! We'll get back to you soon.");
       setEmail("");
@@ -72,7 +72,7 @@ export default function Contact() {
               onChange={(e) => setMessage(e.target.value)}
               required
               className="w-full h-32"
-              placeholder="How can we help you?"
+              placeholder="How can we help you ?"
             />
           </div>
 

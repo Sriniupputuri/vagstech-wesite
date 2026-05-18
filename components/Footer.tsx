@@ -37,6 +37,11 @@ export default function Footer() {
                 </a>
               </li>
               <li>
+                <a href="/courses" className="hover:text-[var(--light-color)] transition-colors">
+                Courses
+                </a>
+              </li>
+              <li>
                 <a href="/services/web-development" className="hover:text-[var(--light-color)] transition-colors">
                   Web Development
                 </a>

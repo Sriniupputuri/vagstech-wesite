@@ -5,7 +5,7 @@ import { Code, Laptop, Zap } from "lucide-react";
 
 export default function WebDevelopment() {
   return (
-    <div className="py-20">
+    <div className="py-4 lg:py-6">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeIn>
           <h1 className="text-4xl md:text-5xl font-bold text-center mb-8">

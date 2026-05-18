@@ -9,6 +9,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Vagstech',
   description: 'Leading technology company providing web development, game development, and e-commerce solutions',
+   icons: { icon: '/images/vg_icon.png', },
 };
 
 export default function RootLayout({
@@ -19,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar />
+        <Navbar/>
         <main className="pt-16">{children}</main>
         <Footer />
       </body>

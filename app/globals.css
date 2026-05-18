@@ -3,10 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --dark-color: #167D7F;
-  --light-color: #98D7C2;
+  /* --dark-color: #167D7F; */
+  /* --light-color: #98D7C2;
   --fonts-color: #167D7F;
-  --hover-color: #29A0B1;
+  --hover-color: #29A0B1; */
+  --dark-color: #054dc7;
+  --light-color: #92a7cc;
+  --fonts-color: #0f326f;
+  --hover-color: #2f61b8;
 }
 
 @layer base {
@@ -19,7 +23,8 @@
 }
 
 .nav-link {
-  @apply text-[white] hover:text-[var(--hover-color)] transition-colors duration-300;
+  /* @apply text-[white] hover:text-[var(--hover-color)] transition-colors duration-300; */
+  @apply text-[var(--dark-color)] hover:text-[var(--hover-color)] transition-colors duration-300;
   position: relative;
 }
 
@@ -68,6 +73,15 @@
   @apply transform -translate-y-2;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
+.course-card {
+  @apply bg-white rounded-xl shadow-lg transition-all duration-500 h-full flex flex-col;
+  background: linear-gradient(145deg, #ffffff, #f3f4f6);
+}
+
+.course-card:hover {
+  @apply transform -translate-y-2;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
 
 .stats-grid {
   @apply grid grid-cols-2 md:grid-cols-4 gap-8 my-16;
@@ -107,4 +121,19 @@
 .tech-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+input::placeholder {
+  color: #bcbdbe; /* Tailwind's gray-500 */
+  opacity: 0.75;
+}
+input:focus::placeholder {
+  color: #9ca3af; /* Tailwind's gray-400 */
+}
+textarea::placeholder {
+  color: #bcbdbe; /* Tailwind's gray-500 */
+  opacity: 0.75;
+}
+textarea:focus::placeholder {
+  color: #9ca3af; /* Tailwind's gray-400 */
 }
