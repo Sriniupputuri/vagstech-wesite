@@ -9,6 +9,7 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      // placeholderColor: ['focus'],
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
