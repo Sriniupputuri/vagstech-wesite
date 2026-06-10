@@ -8,7 +8,7 @@ export default function Footer() {
           <div>
             <h3 className="text-2xl font-bold mb-4">Vagstech</h3>
             <p className="text-[var(--light-color)]">
-              Transforming ideas into digital reality with innovative solutions.
+              Transforming ideas into digital reality with innovative solutions .
             </p>
           </div>
           <div>
