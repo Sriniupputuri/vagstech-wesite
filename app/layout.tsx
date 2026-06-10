@@ -9,7 +9,9 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Vagstech',
   description: 'Leading technology company providing web development, game development, and e-commerce solutions',
-   icons: { icon: 'public/images/vg_icon.png', },
+  icons: {
+    icon: '/images/Vg_icon.png',
+  },
 };
 
 export default function RootLayout({
