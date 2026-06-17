@@ -3,14 +3,13 @@
 @tailwind utilities;
 
 :root {
-  /* --dark-color: #167D7F; */
-  /* --light-color: #98D7C2;
-  --fonts-color: #167D7F;
-  --hover-color: #29A0B1; */
-  --dark-color: #054dc7;
-  --light-color: #92a7cc;
-  --fonts-color: #0f326f;
-  --hover-color: #2f61b8;
+  --dark-color: #d97706;
+  --light-color: #fcd34d;
+  --fonts-color: #1e2c45;
+  --hover-color: #b45309;
+  --charcoal: #2a3040;
+  --accent-color: #f59e0b;
+  --accent-hover: #d97706;
 }
 
 @layer base {
@@ -18,7 +17,8 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    background-color: #fffbf0;
   }
 }
 
@@ -35,7 +35,7 @@
   height: 2px;
   bottom: -4px;
   left: 0;
-  background-color: var(--hover-color);
+  background-color: var(--accent-color);
   transition: width 0.3s ease;
 }
 
@@ -44,7 +44,15 @@
 }
 
 .gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-[var(--dark-color)] to-[var(--hover-color)];
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[var(--charcoal)] to-[var(--dark-color)];
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), sans-serif;
+}
+
+.section-tint {
+  background-color: #f0f4ff;
 }
 
 .card-hover {
@@ -65,13 +73,14 @@
 }
 
 .service-card {
-  @apply bg-white p-8 rounded-xl shadow-lg transition-all duration-500 h-full flex flex-col;
+  @apply bg-white p-8 rounded-xl shadow-lg transition-all duration-500 h-full flex flex-col border border-transparent;
   background: linear-gradient(145deg, #ffffff, #f3f4f6);
 }
 
 .service-card:hover {
   @apply transform -translate-y-2;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 40px rgba(245, 158, 11, 0.15);
+  border-color: rgba(245, 158, 11, 0.3);
 }
 .course-card {
   @apply bg-white rounded-xl shadow-lg transition-all duration-500 h-full flex flex-col;
@@ -85,7 +94,7 @@
 
 .stats-grid {
   @apply grid grid-cols-2 md:grid-cols-4 gap-8 my-16;
-  background: linear-gradient(135deg, rgba(22, 125, 127, 0.1), rgba(152, 215, 194, 0.1));
+  background: linear-gradient(135deg, rgba(26, 80, 212, 0.08), rgba(107, 154, 244, 0.12));
   border-radius: 1rem;
   padding: 2rem;
 }
